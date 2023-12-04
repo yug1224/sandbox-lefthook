@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true
+  commands:
+    ramen:
+      root: ramen/
+      glob: '*.{ts,tsx}'
+      run: npx eslint --fix {staged_files} && git add {staged_files}
+    sushi:
+      root: sushi/
+      glob: '*.{ts,tsx}'
+      run: npx eslint --fix {staged_files} && git add {staged_files}
